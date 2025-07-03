@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="TuongD.PCF" constructor="HttpButton" version="0.0.1" display-name-key="HttpButton" description-key="HttpButton description" control-type="virtual" >
+
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    
+  
+    <!-- Font Properties -->
+    <property name="FontName" display-name-key="FontName" of-type="SingleLine.Text" usage="input" default-value="Segoe UI" />
+    <property name="FontSize" display-name-key="FontSize" of-type="Decimal" usage="input" default-value="10.5"/>
+    <property name="FontColor" display-name-key="FontColor" of-type="SingleLine.Text" usage="input" />
+    <property name="FontWeight" display-name-key="FontWeight" of-type="Enum" usage="input" default-value="normal">
+      <value name="normal" display-name-key="Normal">normal</value>
+      <value name="bold" display-name-key="Bold">bold</value>
+      <value name="bolder" display-name-key="Bolder">bolder</value>
+      <value name="lighter" display-name-key="Lighter">lighter</value>
+    </property>
+    <property name="DisabledFontColor" display-name-key="DisabledFontColor" of-type="SingleLine.Text" usage="input" />
+
+
+    <!-- Fill Properties -->
+    <property name="DisabledFillColor" display-name-key="DisabledFillColor" of-type="SingleLine.Text" usage="input" />
+
+
+    <!-- Border Styles -->
+    <property name="BorderColor" display-name-key="BorderColor" of-type="SingleLine.Text" usage="input" />
+    <property name="BorderThickness" display-name-key="BorderThickness" of-type="Whole.None" usage="input" default-value="0" />
+    <property name="BorderRadius" display-name-key="BorderRadius" of-type="Whole.None" usage="input" />
+
+
+    
+    <property name="buttonText" display-name-key="Text" of-type="SingleLine.Text" usage="bound" required="true" default-value="Send Request" />
+    <property name="targetEndpoint" display-name-key="Target endpoint" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="method" display-name-key="Method" of-type="Enum" usage="bound" required="true" default-value="0">
+      <value name="POST" display-name-key="POST">0</value>
+      <value name="GET" display-name-key="GET">1</value>
+      <value name="PUT" display-name-key="PUT">2</value>
+      <value name="PATCH" display-name-key="PATCH">3</value>
+      <value name="DELETE" display-name-key="DELETE">4</value>
+    </property>
+    <property name="payload" display-name-key="JSON payload" of-type="SingleLine.Text" usage="bound"/>
+    <property name="Responses" display-name-key="Responses" of-type="SingleLine.Text" usage="output"  />
+
+    <resources>
+      <code path="index.ts" order="1"/>
+      <platform-library name="React" version="16.14.0" />
+      <platform-library name="Fluent" version="9.46.2" />
+
+    </resources>
+
+  </control>
+</manifest>
