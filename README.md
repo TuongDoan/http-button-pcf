@@ -46,6 +46,10 @@ You can download the latest managed solution here:
 | 🎨 **BorderThickness**     | Border thickness in pixels.                                                                    |
 | 🎨 **BorderRadius**        | Border corner radius in pixels.                                                                |
 
+
+> 📌 **Note:** POST requests require a valid JSON payload.
+
+
 ## 📤 Output Properties
 
 | display-name-key | Description                                            |
