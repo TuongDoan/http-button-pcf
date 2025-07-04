@@ -21,7 +21,7 @@ A Power Apps custom component (PCF) that allows you to send HTTP requests from y
 
 You can download the latest managed solution here:
 
-➡️ [Download HttpButton_Unmanaged.zip](https://github.com/TuongDoan/http-button-pcf/releases/download/v1.0.0/HttpButton-Unmanaged.zip)
+➡️ [Download HttpButton_Managed.zip](https://github.com/TuongDoan/http-button-pcf/releases/download/v1.0.1/HttpButton_Managed.zip)
 
 Import this into your Power Platform environment via the **Solutions** area in Power Apps.
 
