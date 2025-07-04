@@ -14,6 +14,8 @@ A Power Apps custom component (PCF) that allows you to send HTTP requests from y
 - No need to convert your app to Premium
 - Built with React + Fluent UI
 
+<img width="1470" alt="Screenshot 2025-07-04 at 12 07 31 PM" src="https://github.com/user-attachments/assets/536be601-d57a-4904-84b6-5c79f283afa4" />
+
 
 ## 📦 Download
 
