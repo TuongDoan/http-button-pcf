@@ -15,18 +15,59 @@ A Power Apps custom component (PCF) that allows you to send HTTP requests from y
 - Built with React + Fluent UI
 
 
-
-
 ## 📦 Download
 
 You can download the latest managed solution here:
 
 ➡️ [Download HttpButton_Managed.zip](https://github.com/TuongDoan/http-button-pcf/releases/download/v1.0.1/HttpButton_Managed.zip)
 
-Import this into your Power Platform environment via the **Solutions** area in Power Apps.
-
 ---
 
+## 🛠️ Input Properties
+
+| display-name-key           | Description                                                                                     |
+|----------------------------|-------------------------------------------------------------------------------------------------|
+| 🔤 **Text**                | Text displayed on the button (e.g. “Send Request”).                                            |
+| 🌐 **Target endpoint**     | HTTPS URL of the REST endpoint to call (must begin with `https://`).                            |
+| 📨 **Method**              | HTTP method: POST, GET, PUT, PATCH or DELETE.                                                  |
+| 📦 **JSON payload**        | JSON payload string (required for POST/PUT/PATCH).                                             |
+| 🔑 **Authentication Type** | Authentication type: None, Basic or API Key.                                                   |
+| 👤 **Basic Auth Username** | Username for Basic auth (if **Authentication Type** = Basic).                                   |
+| 🔒 **Basic Auth Password** | Password for Basic auth (if **Authentication Type** = Basic).                                   |
+| 🏷️ **API Key Header Name** | Header name for API Key (if **Authentication Type** = API Key).                                 |
+| 🗝️ **API Key Value**       | API Key value (if **Authentication Type** = API Key).                                           |
+| 🎨 **FontName**            | Font family for button text (e.g. “Segoe UI”).                                                 |
+| 🎨 **FontSize**            | Font size in pixels (e.g. `10.5`).                                                              |
+| 🎨 **FontColor**           | Color of the text when enabled.                                                                |
+| 🎨 **FontWeight**          | Text weight: normal, bold, bolder, lighter.                                                    |
+| 🎨 **DisabledFontColor**   | Color of the text when disabled.                                                               |
+| 🎨 **DisabledFillColor**   | Background color when disabled.                                                                |
+| 🎨 **BorderColor**         | Button border color.                                                                           |
+| 🎨 **BorderThickness**     | Border thickness in pixels.                                                                    |
+| 🎨 **BorderRadius**        | Border corner radius in pixels.                                                                |
+
+## 📤 Output Properties
+
+| display-name-key | Description                                            |
+|------------------|--------------------------------------------------------|
+| 📊 **Responses**    | JSON string with `statusCode` and `body` of the HTTP response. |
+
+🏃 **Use the Button**  
+   - Save and publish your form or app.  
+   - In runtime, click **Send Request** (or your custom **Text**) to fire the HTTP request.  
+   - If the URL isn’t HTTPS or the payload isn’t valid JSON, an alert ⚠️ will appear.
+
+📊 **Read the Response**  
+   - The control outputs a JSON string in the **Responses** field, for example:  
+     ```json
+     {
+       "statusCode": 200,
+       "body": "{ \"success\": true }"
+     }
+     ```  
+
+
+---
 ## ⚠️ Important Notice on Security and DLP
 
 This component executes HTTP requests **directly in the user's browser**, so you should be aware that **it does not follow Power Platform Data Loss Prevention (DLP) policies**. 
