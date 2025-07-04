@@ -56,10 +56,6 @@ You can download the latest managed solution here:
 |------------------|--------------------------------------------------------|
 | 📊 **Responses**    | JSON string with `statusCode` and `body` of the HTTP response. |
 
-🏃 **Use the Button**  
-   - Save and publish your form or app.  
-   - In runtime, click **Send Request** (or your custom **Text**) to fire the HTTP request.  
-   - If the URL isn’t HTTPS or the payload isn’t valid JSON, an alert ⚠️ will appear.
 
 📊 **Read the Response**  
    - The control outputs a JSON string in the **Responses** field, for example:  
