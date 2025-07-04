@@ -33,4 +33,4 @@ This component executes HTTP requests **directly in the user's browser**, so you
 
 ➡️ Please use this component **at your own risk**, especially in environments with strict governance, security, or compliance requirements.
 
-We recommend using this only with **trusted APIs** and avoiding the use of sensitive or confidential data in ungoverned environments.
+I recommend using this only with **trusted APIs** and avoiding the use of sensitive or confidential data in ungoverned environments.
