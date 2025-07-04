@@ -42,6 +42,22 @@
     <property name="payload" display-name-key="JSON payload" of-type="SingleLine.Text" usage="bound"/>
     <property name="Responses" display-name-key="Responses" of-type="SingleLine.Text" usage="output"  />
 
+
+    <property name="authType" display-name-key="Authentication Type" of-type="Enum" usage="input" default-value="0">
+      <value name="None" display-name-key="None">0</value>
+      <value name="Basic" display-name-key="Basic">1</value>
+      <value name="ApiKey" display-name-key="API Key">2</value>
+    </property>
+        <!-- Basic Authentication -->
+    <property name="basicAuthUsername" display-name-key="Basic Auth Username" of-type="SingleLine.Text" usage="input" />
+    <property name="basicAuthPassword" display-name-key="Basic Auth Password" of-type="SingleLine.Text" usage="input" />
+
+    <!-- API Key Authentication -->
+    <property name="apiKeyHeaderName" display-name-key="API Key Header Name" of-type="SingleLine.Text" usage="input" default-value="x-api-key" />
+    <property name="apiKeyValue" display-name-key="API Key Value" of-type="SingleLine.Text" usage="input" />
+
+
+
     <resources>
       <code path="index.ts" order="1"/>
       <platform-library name="React" version="16.14.0" />

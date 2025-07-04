@@ -27,6 +27,14 @@ export class HttpButton implements ComponentFramework.ReactControl<IInputs, IOut
   private async sendRequest(): Promise<void> {
     const url = this.context.parameters.targetEndpoint.raw ?? "";
     const methodEnum = this.context.parameters.method.raw;
+        // HTTPS validation
+    if (!url.toLowerCase().startsWith("https://")) {
+      alert("Only HTTPS endpoints are allowed for security reasons.");
+      this.responseStatus = undefined;
+      this.responseBody = undefined;
+      this.notifyOutputChanged();
+      return;
+    }
 
     const methodMap: Record<string, string> = {
       "0": "POST",
@@ -62,11 +70,31 @@ export class HttpButton implements ComponentFramework.ReactControl<IInputs, IOut
       const bodyObj = parsed as Record<string, unknown>;
       bodyString = JSON.stringify(bodyObj);
     }
+    // --- Authentication ---
+    const headers: Record<string, string> = { "Content-Type": "application/json" };
+
+        // Use authType to determine which authentication to apply
+    const authType = this.context.parameters.authType?.raw;
+
+    if (authType === "1") { // Basic
+      const username = this.context.parameters.basicAuthUsername?.raw;
+      const password = this.context.parameters.basicAuthPassword?.raw;
+      if (username && password) {
+        const encoded = btoa(`${username}:${password}`);
+        headers["Authorization"] = `Basic ${encoded}`; // eslint-disable-line @typescript-eslint/dot-notation
+      }
+    } else if (authType === "2") { // API Key
+      const apiKeyValue = this.context.parameters.apiKeyValue?.raw;
+      if (apiKeyValue) {
+        const apiKeyHeader = this.context.parameters.apiKeyHeaderName?.raw ?? "x-api-key";
+        headers[apiKeyHeader] = apiKeyValue;
+      }
+    }
 
     try {
       const response = await fetch(url, {
         method,
-        headers: { "Content-Type": "application/json" },
+        headers,
         body: bodyString,
       });
       this.responseStatus = response.status;
