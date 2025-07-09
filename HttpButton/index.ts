@@ -124,7 +124,7 @@ export class HttpButton implements ComponentFramework.ReactControl<IInputs, IOut
     const fontColor = isDisabled
         ? context.parameters.DisabledFontColor.raw ?? "#888"
         : undefined 
-        // context.parameters.FontColor.raw || "#222";
+        
 
     // Fill styles
     const backgroundColor = isDisabled

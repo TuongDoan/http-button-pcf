@@ -2,7 +2,7 @@
 <manifest>
   <control namespace="TuongD.PCF" constructor="HttpButton" version="0.0.1" display-name-key="HttpButton" description-key="HttpButton description" control-type="virtual" >
 
-    <external-service-usage enabled="false">
+    <external-service-usage enabled="true">
     </external-service-usage>
     
   
