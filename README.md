@@ -4,6 +4,19 @@ A Power Apps custom component (PCF) that allows you to send HTTP requests from y
 
 ---
 
+
+# ⚠️ Important Notice on Security and DLP
+
+This component executes HTTP requests directly in the user’s browser, which means it does not comply with Power Platform Data Loss Prevention (DLP) policies.
+
+Although using this component does not make your app premium, you are still expected to have a premium license, as it enables functionality similar to HTTP actions by making calls locally from the front end.
+
+➡️ Please use this component at your own risk, especially in environments with strict governance, security, or compliance requirements.
+
+I recommend using it only with trusted APIs and avoiding sensitive or confidential data in ungoverned environments.
+
+---
+
 ## ✨ Features
 
 - Send HTTP requests (GET, POST, PUT, PATCH, DELETE)
@@ -69,11 +82,4 @@ You can download the latest managed solution here:
      ```  
 
 
----
-## ⚠️ Important Notice on Security and DLP
 
-This component executes HTTP requests **directly in the user's browser**, so you should be aware that **it does not follow Power Platform Data Loss Prevention (DLP) policies**. 
-
-➡️ Please use this component **at your own risk**, especially in environments with strict governance, security, or compliance requirements.
-
-I recommend using this only with **trusted APIs** and avoiding the use of sensitive or confidential data in ungoverned environments.
