@@ -9,8 +9,6 @@ A Power Apps custom component (PCF) that allows you to send HTTP requests from y
 
 This component executes HTTP requests directly in the user’s browser, which means it does not comply with Power Platform Data Loss Prevention (DLP) policies.
 
-Although using this component does not make your app premium, you are still expected to have a premium license, as it enables functionality similar to HTTP actions by making calls locally from the front end.
-
 ➡️ Please use this component at your own risk, especially in environments with strict governance, security, or compliance requirements.
 
 I recommend using it only with trusted APIs and avoiding sensitive or confidential data in ungoverned environments.
