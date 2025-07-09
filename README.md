@@ -1,6 +1,6 @@
 # 🚀 HTTP Button PCF
 
-A Power Apps custom component (PCF) that allows you to send HTTP requests from your app without upgrading it to a Premium license. Lightweight, flexible, and fully configurable
+A Power Apps custom component (PCF) that allows you to send HTTP requests from your app locally
 
 ---
 
