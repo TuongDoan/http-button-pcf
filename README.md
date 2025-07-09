@@ -24,7 +24,6 @@ I recommend using it only with trusted APIs and avoiding sensitive or confidenti
   - Font size, color, and weight
   - Border and background styles
   - Button text and behavior
-- No need to convert your app to Premium
 - Built with React + Fluent UI
 
 <img width="1470" alt="Screenshot 2025-07-04 at 12 07 31 PM" src="https://github.com/user-attachments/assets/536be601-d57a-4904-84b6-5c79f283afa4" />
